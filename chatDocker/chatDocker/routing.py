@@ -3,7 +3,8 @@
 # import chat.routing
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
-import chat
+
+import chat.routing
 
 
 application = ProtocolTypeRouter({
