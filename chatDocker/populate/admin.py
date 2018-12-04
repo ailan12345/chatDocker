@@ -8,7 +8,7 @@ def populate():
     User.objects.all().delete()
     User.objects.create_superuser(first_name='admin', username='admin', password='admin', email='karta2599434@gmail.com')
     for i in range(1,5):
-        User.objects.create(first_name='user'+str(i), username='user'+str(i), password='user'+str(i), email='karta2599434@gmail.com')
+        User.objects.create_user(first_name='user'+str(i), username='user'+str(i), password='user'+str(i), email='karta2599434@gmail.com')
     print('done')
      
      
