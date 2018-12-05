@@ -106,8 +106,9 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('redis', 6379)],
+            'hosts': [("localhost", 6379)], #('redis', 6379)
         },
+        #'ROUTING': "chatDocker.routing.channel_routing",
     }
 }
 
@@ -149,9 +150,9 @@ USE_TZ = True
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
 # LOGIN settings
-LOGIN_REDIRECT_URL = reverse_lazy('chat')
-LOGIN_URL = reverse_lazy('login')
-LOGOUT_URL = reverse_lazy('logout')
+# LOGIN_REDIRECT_URL = reverse_lazy('chat')
+# LOGIN_URL = reverse_lazy('login')
+# LOGOUT_URL = reverse_lazy('logout')
 
 
 
